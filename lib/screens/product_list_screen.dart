@@ -1,6 +1,3 @@
-// ========================================
-// FILE: screens/product_list_screen.dart
-// ========================================
 import 'package:flutter/material.dart';
 import '../models/product.dart';
 import '../widgets/product_card.dart';
@@ -11,7 +8,7 @@ class ProductListScreen extends StatelessWidget {
 
   ProductListScreen({required this.categoryName});
 
-  // Fungsi untuk mendapatkan produk berdasarkan kategori
+  
   List<Product> getProductsByCategory() {
     Map<String, List<Product>> allProducts = {
       'Makanan': [
@@ -101,7 +98,7 @@ class ProductListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final products = getProductsByCategory();
     
-    // Deteksi ukuran layar
+    
     final screenWidth = MediaQuery.of(context).size.width;
     final isDesktop = screenWidth > 600;
 
@@ -118,17 +115,17 @@ class ProductListScreen extends StatelessWidget {
             padding: EdgeInsets.all(16.0),
             child: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: isDesktop ? 4 : 2,  // 4 kolom desktop, 2 kolom mobile
+                crossAxisCount: isDesktop ? 4 : 2,  
                 crossAxisSpacing: 16,       
                 mainAxisSpacing: 16,        
-                childAspectRatio: isDesktop ? 0.75 : 0.85, // Proporsi berbeda
+                childAspectRatio: isDesktop ? 0.75 : 0.85, 
               ),
               itemCount: products.length,
               itemBuilder: (context, index) {
                 return ProductCard(
                   product: products[index],
                   onTap: () {
-                    // Navigasi ke halaman ProductDetail
+                    
                     Navigator.push(
                       context,
                       MaterialPageRoute(

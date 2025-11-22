@@ -44,7 +44,6 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Judul dengan styling lebih baik
               Text(
                 'Pilih Kategori',
                 style: TextStyle(
@@ -64,15 +63,15 @@ class HomeScreen extends StatelessWidget {
               ),
               SizedBox(height: 24),
               
-              // List kategori dengan spacing yang lebih baik
+             
               Expanded(
                 child: LayoutBuilder(
                   builder: (context, constraints) {
-                    // Deteksi mode desktop
+                    
                     bool isDesktop = constraints.maxWidth > 600;
                     
                     if (isDesktop) {
-                      // Mode Desktop: Grid Layout
+                     
                       return GridView.builder(
                         physics: BouncingScrollPhysics(),
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -90,7 +89,7 @@ class HomeScreen extends StatelessWidget {
                         },
                       );
                     } else {
-                      // Mode Mobile: List Layout
+                     
                       return ListView.separated(
                         physics: BouncingScrollPhysics(),
                         itemCount: categories.length,
@@ -151,7 +150,7 @@ class HomeScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 18, vertical: 12),
           child: Row(
             children: [
-              // Icon container
+              
               Container(
                 width: 48,
                 height: 48,
@@ -167,7 +166,7 @@ class HomeScreen extends StatelessWidget {
               ),
               SizedBox(width: 16),
               
-              // Text
+              
               Expanded(
                 child: Text(
                   category.name,
@@ -180,7 +179,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               
-              // Arrow icon
+       
               Container(
                 width: 32,
                 height: 32,

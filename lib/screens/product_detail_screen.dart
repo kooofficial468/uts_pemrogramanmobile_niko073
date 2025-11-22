@@ -1,6 +1,3 @@
-// ========================================
-// FILE: screens/product_detail_screen.dart
-// ========================================
 import 'package:flutter/material.dart';
 import '../models/product.dart';
 
@@ -11,7 +8,7 @@ class ProductDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Deteksi ukuran layar
+
     final screenWidth = MediaQuery.of(context).size.width;
     final isDesktop = screenWidth > 600;
     
@@ -30,7 +27,7 @@ class ProductDetailScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // Card Icon dan Nama Produk
+               
                   Card(
                     elevation: 4,
                     shape: RoundedRectangleBorder(
@@ -40,7 +37,7 @@ class ProductDetailScreen extends StatelessWidget {
                       padding: EdgeInsets.all(32.0),
                       child: Column(
                         children: [
-                          // Icon produk dengan background circle
+
                           Container(
                             padding: EdgeInsets.all(24),
                             decoration: BoxDecoration(
@@ -54,8 +51,7 @@ class ProductDetailScreen extends StatelessWidget {
                             ),
                           ),
                           SizedBox(height: 24),
-                          
-                          // Nama produk
+                        
                           Text(
                             product.name,
                             style: TextStyle(
@@ -67,7 +63,7 @@ class ProductDetailScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 12),
                           
-                          // Kategori
+                        
                           Container(
                             padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                             decoration: BoxDecoration(
@@ -90,7 +86,7 @@ class ProductDetailScreen extends StatelessWidget {
                   
                   SizedBox(height: 16),
                   
-                  // Card Harga
+                 
                   Card(
                     elevation: 4,
                     shape: RoundedRectangleBorder(
@@ -123,8 +119,7 @@ class ProductDetailScreen extends StatelessWidget {
                   ),
                   
                   SizedBox(height: 16),
-                  
-                  // Card Deskripsi
+               
                   Card(
                     elevation: 4,
                     shape: RoundedRectangleBorder(

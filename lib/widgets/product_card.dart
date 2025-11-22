@@ -1,6 +1,3 @@
-// ========================================
-// FILE: widgets/product_card.dart
-// ========================================
 import 'package:flutter/material.dart';
 import '../models/product.dart';
 
@@ -28,7 +25,7 @@ class ProductCard extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Icon produk
+              
               Icon(
                 product.icon,
                 size: 48,
@@ -36,7 +33,7 @@ class ProductCard extends StatelessWidget {
               ),
               SizedBox(height: 12),
               
-              // Nama produk
+             
               Text(
                 product.name,
                 style: TextStyle(
